@@ -1,0 +1,27 @@
+.root { @apply box-border min-h-full w-full p-6; background: var(--marketplace-background, var(--color-muted)); color: var(--marketplace-text, var(--color-foreground)); font-family: var(--marketplace-font, var(--font-sans)); }
+.root * { box-sizing: border-box; }
+.back { @apply mb-4 inline-block text-sm font-medium text-primary no-underline; }
+.card { @apply overflow-hidden rounded-2xl border border-border bg-card shadow-sm; }
+.gallery { @apply grid gap-2 bg-muted p-2 sm:grid-cols-2; }
+.image, .imagePlaceholder { @apply block aspect-[4/3] w-full rounded-xl bg-muted object-cover; }
+.image:first-child { @apply sm:col-span-2; }
+.imagePlaceholder { @apply flex items-center justify-center text-sm text-muted-foreground; }
+.content { @apply p-5 sm:p-8; }
+.heading { @apply flex flex-col justify-between gap-3 sm:flex-row sm:items-start; }
+.eyebrow { @apply mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground; }
+.title { @apply m-0 text-2xl font-bold tracking-tight sm:text-3xl; }
+.price { @apply m-0 text-2xl font-bold text-primary; }
+.location { @apply mt-3 text-sm text-muted-foreground; }
+.actions { @apply mt-6 flex flex-wrap gap-3; }
+.primaryButton, .secondaryButton { @apply rounded-lg px-4 py-3 font-medium; cursor: pointer; font: inherit; }
+.primaryButton { @apply border-0 bg-primary text-primary-foreground; }
+.secondaryButton { @apply border border-border bg-background text-foreground; }
+.primaryButton:disabled, .secondaryButton:disabled { @apply cursor-wait opacity-60; }
+.metadata { @apply mt-8 grid gap-4 border-y border-border py-5 sm:grid-cols-2; }
+.metadata dt { @apply text-xs font-semibold uppercase tracking-wide text-muted-foreground; }
+.metadata dd { @apply mt-1; }
+.description { @apply mt-8; }
+.description h2 { @apply text-lg font-semibold; }
+.description p { @apply mt-2 whitespace-pre-wrap leading-7 text-muted-foreground; }
+.feedback { @apply min-h-6 mt-5 text-sm text-primary; }
+.state { @apply rounded-xl border border-border bg-card px-6 py-12 text-center text-sm text-muted-foreground; }

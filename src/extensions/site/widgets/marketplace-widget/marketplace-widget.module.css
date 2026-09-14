@@ -1,0 +1,13 @@
+.root { @apply box-border min-h-full w-full p-6; background: var(--marketplace-background, var(--color-muted)); color: var(--marketplace-text, var(--color-foreground)); font-family: var(--marketplace-font, var(--font-sans)); }
+.root * { box-sizing: border-box; }
+.header { @apply mb-5 flex gap-3; }
+.search { @apply min-w-0 flex-1 rounded-lg border border-border bg-background px-3.5 py-3 text-inherit outline-none; }
+.button { @apply rounded-lg border-0 bg-primary px-4 py-3 font-inherit font-medium text-primary-foreground; cursor: pointer; }
+.grid { @apply grid gap-4; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.card { @apply block w-full overflow-hidden rounded-xl border border-border bg-card text-left text-inherit no-underline; cursor: pointer; font: inherit; }
+.card img { @apply block aspect-[4/3] w-full bg-muted object-cover; }
+.body { @apply p-3.5; }
+.title { @apply mb-2 font-bold; }
+.price { @apply font-bold text-primary; }
+.muted, .state { @apply text-sm text-muted-foreground; }
+.state { @apply py-8 text-center; }
