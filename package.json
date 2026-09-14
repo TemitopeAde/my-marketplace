@@ -17,9 +17,14 @@
   "dependencies": {
     "@wix/astro": "^2.39.0",
     "@wix/dashboard": "^1.3.43",
+    "@wix/data": "^1.0.521",
     "@wix/design-system": "^1.154.0",
     "@wix/essentials": "^0.1.23",
+    "@wix/media": "^1.0.274",
+    "@wix/members": "^1.0.518",
+    "@wix/realtime": "^1.0.69",
     "astro": "^5.8.0",
+    "cn": "^0.3.0",
     "typescript": "^5.8.3"
   },
   "devDependencies": {

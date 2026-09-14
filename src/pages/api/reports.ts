@@ -1,0 +1,3 @@
+import type { APIRoute } from 'astro';
+import { COLLECTIONS, cleanText, currentMemberId, elevatedInsert, handleError, json } from '../../lib/server';
+export const POST: APIRoute = async ({ request }) => { try { const reporterId = await currentMemberId(); const body = await request.json() as { listingId?: string; reason?: string; description?: string }; if (!body.listingId || !body.reason) return json({ error: 'Listing and reason are required' }, 400); const report = await elevatedInsert(COLLECTIONS.reports, { reporterId, listingId: cleanText(body.listingId, 100), reason: cleanText(body.reason, 60), description: cleanText(body.description, 1000), status: 'OPEN', createdAt: new Date() }); return json({ report }, 201); } catch (error) { return handleError(error); } };
